@@ -1,0 +1,137 @@
+/* Reset simple */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050910;
+    color: #f5f5f5;
+}
+
+/* Barre du haut */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: #0c141d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c71e1e;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid #9900ff;
+    color: #9900ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+    background: #9900ff;
+    color: #050910;
+}
+
+/* Page Terrestres */
+.terrestres-page {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px 40px;
+}
+
+.terrestres-page h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+/* Grille de cartes */
+.dino-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Carte dino */
+.dino-card {
+    background: #0c141d;
+    border-radius: 12px;
+    padding: 15px 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dino-name {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.dino-type {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    margin-bottom: 6px;
+}
+
+/* Stats bloc */
+.dino-stats, .dino-extra {
+    background: #111b24;
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-row,
+.extra-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.label {
+    opacity: 0.7;
+}
+
+.value {
+    font-weight: 600;
+}
+
+/* Prix */
+.price {
+    color: #c71e1e;
+    font-weight: 700;
+}
+
+/* Responsive léger */
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .terrestres-page h1 {
+        font-size: 1.7rem;
+    }
+}
